@@ -88,6 +88,7 @@ public class UploadServlet extends HttpServlet{
 				returnUri.add("img\\" + newFileName);
 			}
 			writer.println(JSONObject.toJSON(new Upload(returnUri)));
+			writer
 		}
 		catch (Exception e) {
 			writer.println(JSONObject.toJSON(new Result<Object>(104, null, "图片上传失败!")));
